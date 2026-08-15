@@ -1,0 +1,20 @@
+services:
+  backend:
+    build:
+      context: ./pricing_service
+      dockerfile: Dockerfile
+    container_name: option-pricing-backend
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: option-pricing-frontend
+    ports:
+      - "5173:80"
+    environment:
+      VITE_WS_URL: ws://localhost:8000/ws
+    depends_on:
+      - backend

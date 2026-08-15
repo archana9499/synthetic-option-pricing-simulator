@@ -1,0 +1,310 @@
+.app {
+  width: min(1400px, 94%);
+  margin: 0 auto;
+  padding: 36px 0 28px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #64748b;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 42px);
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  color: #94a3b8;
+}
+
+.connection,
+.simulator-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.connection {
+  padding: 10px 14px;
+  border: 1px solid #1e293b;
+  border-radius: 999px;
+  background: #111827;
+}
+
+.connected {
+  color: #4ade80;
+}
+
+.disconnected {
+  color: #f87171;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.card {
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  background: #111827;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.spot-card,
+.status-card {
+  padding: 24px;
+}
+
+.card-label {
+  margin-bottom: 10px;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.spot-symbol {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.spot-price {
+  margin: 5px 0;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.update-time,
+.status-card p {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.status-card p {
+  margin-bottom: 0;
+}
+
+.status-card strong {
+  color: #cbd5e1;
+}
+
+.running {
+  color: #4ade80;
+}
+
+.stopped {
+  color: #fbbf24;
+}
+
+.controls-card,
+.filter-card {
+  padding: 22px 24px;
+  margin-bottom: 16px;
+}
+
+.controls-card h2,
+.filter-card h2,
+.table-card h2 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.controls-card section {
+  margin: 0;
+}
+
+.controls-card label,
+.filter-card label {
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+input,
+select {
+  margin-left: 6px;
+  padding: 9px 11px;
+  border: 1px solid #334155;
+  border-radius: 7px;
+  outline: none;
+  color: #e5e7eb;
+  background: #0f172a;
+}
+
+input:focus,
+select:focus {
+  border-color: #64748b;
+}
+
+button {
+  margin-right: 8px;
+  padding: 9px 17px;
+  border: 1px solid #334155;
+  border-radius: 7px;
+  color: #e5e7eb;
+  background: #1e293b;
+  font-weight: 600;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.table-card {
+  overflow: hidden;
+  padding: 22px 0 0;
+}
+
+.table-card h2 {
+  padding: 0 24px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th {
+  padding: 12px 18px;
+  border-bottom: 1px solid #334155;
+  color: #64748b;
+  background: #0f172a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+th:first-child,
+td:first-child {
+  text-align: left;
+}
+
+td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #1e293b;
+  color: #cbd5e1;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: #172033;
+}
+
+.price-up {
+  background: rgba(34, 197, 94, 0.16);
+  color: #4ade80 !important;
+}
+
+.price-down {
+  background: rgba(239, 68, 68, 0.16);
+  color: #f87171 !important;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+  border: 1px dashed #334155;
+  border-radius: 14px;
+  color: #94a3b8;
+}
+
+.empty-state p {
+  margin: 14px 0 4px;
+  font-weight: 600;
+}
+
+.empty-state span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.loading-spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid #334155;
+  border-top-color: #94a3b8;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+footer {
+  padding: 24px 0 0;
+  color: #475569;
+  font-size: 12px;
+  text-align: center;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .table-card {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 850px;
+  }
+
+  .filter-card label {
+    display: block;
+    margin-bottom: 12px;
+  }
+}
