@@ -4,8 +4,15 @@ A real-time synthetic options pricing application built with Python/FastAPI and 
 
 The application simulates an underlying instrument, calculates synthetic European option prices using the Black-Scholes model, and publishes pricing updates through a WebSocket connection to a React frontend.
 
+# Real-Time Synthetic Option Pricing Grid
+
+A real-time synthetic options pricing application built with Python/FastAPI and React/TypeScript.
+
+The application simulates an underlying instrument, calculates synthetic European option prices using the Black-Scholes model, and publishes pricing updates through a WebSocket connection to a React frontend.
+
 ## Architecture
 
+```text
 ┌──────────────────────────┐
 │ Python Synthetic         │
 │ Pricing Service          │
@@ -60,6 +67,7 @@ Configurable volatility
 Temporary price increase/decrease highlighting
 
 Project Structure
+
 synthetic_option_pricing/
 │
 ├── pricing_service/
